@@ -41,7 +41,7 @@
       }
     },
     "line_linked": {
-      "enable": true,
+      "enable": false,
 
     },
     "move": {
