@@ -57,7 +57,7 @@ body {
 
 .glow-on-hover:before {
     content: '';
-    background: linear-gradient(45deg, #C1CEFE, #D4DCF8, #C1CEFE, #D4DCF8, #C1CEFE, #D4DCF8, #C1CEFE, #D4DCF8, #C1CEFE, #D4DCF8);
+    background: linear-gradient(45deg, #e0f2ff, #cae8ff, #b5deff, #96cefd, #78bbfa, #3892f3, #147af3, #0265dc);
     position: absolute;
     top: -2px;
     left:-2px;
