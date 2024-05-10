@@ -25,6 +25,17 @@ body {
     font-variation-settings: "wdth" 100;
 }  
 
+button {
+    width: 200px;
+    height: 100px;
+    position: relative;
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
 .particle-container {
     position: absolute;
     top: 0;
@@ -95,6 +106,70 @@ body {
     top: 0;
     border-radius: 10px;
 }
+.button-container-bottom {
+    position: absolute;
+    top: 94%;
+    left: 94%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.glow-on-hover-bottom {
+    width: 50px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover-bottom:before {
+    content: '';
+    background: linear-gradient(45deg, #e0f2ff, #cae8ff, #b5deff, #96cefd, #78bbfa, #3892f3, #147af3, #0265dc, #147af3, #3892f3, #78bbfa, #96cefd, #b5deff, #cae8ff, #e0f2ff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover-bottom:active {
+    color: #000
+}
+
+.glow-on-hover-bottom:active:after {
+    background: transparent;
+}
+
+.glow-on-hover-bottom:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover-bottom:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
 
 @keyframes glowing {
     0% { background-position: 0 0; }
